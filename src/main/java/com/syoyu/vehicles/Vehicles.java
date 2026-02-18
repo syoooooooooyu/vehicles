@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 @Mod(Vehicles.MOD_ID)
 public final class Vehicles {
 
-    public static final String MOD_ID = "vehicles";
+    public static final String MOD_ID = "Vehicles";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     private static Vehicles instance = null;
