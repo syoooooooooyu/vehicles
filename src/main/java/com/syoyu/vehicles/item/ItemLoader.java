@@ -1,6 +1,5 @@
 package com.syoyu.vehicles.item;
 
-import com.syoyu.vehicles.item.items.CustomItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,13 +11,13 @@ public final class ItemLoader {
 
     private static final DeferredRegister<Item> repository = DeferredRegister.create(ForgeRegistries.ITEMS, "vehicles");
 
-    private static final List<CustomItem> items = List.of(
-
+    private static final List<String> items = List.of(
+            "car_item"
     );
 
     ItemLoader(BusGroup bus){
-        for (CustomItem customItem: items) {
-            repository.register(customItem.getItemName(), () -> new Item(new Item.Properties()));
+        for (String customItem: items) {
+            repository.register(customItem, () -> new Item(new Item.Properties()));
         }
         repository.register(bus);
     }
